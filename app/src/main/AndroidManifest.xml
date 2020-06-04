@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.projeto.pi">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.projeto.pi.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.projeto.pi.LoginActivity" />
+        <activity android:name="com.projeto.pi.RegisterActivity" />
+        <activity android:name="com.projeto.pi.MainActivity" />
+        <activity android:name="com.projeto.pi.PostActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name="com.projeto.pi.CommentsActivity" />
+        <activity android:name="com.projeto.pi.OptionsActivity" />
+        <activity android:name="com.projeto.pi.EditProfileActivity" />
+        <activity android:name="com.projeto.pi.FollowersActivity" />
+        <activity android:name="com.projeto.pi.StoryActivity" />
+        <activity android:name="com.projeto.pi.AddStoryActivity"></activity>
+    </application>
+
+</manifest>
