@@ -7,7 +7,8 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:gravity="center"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@drawable/background_degrade">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -15,57 +16,50 @@
         android:src="@drawable/logo"/>
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
-        android:hint="Usuário"
         android:id="@+id/username"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"/>
+        style="@style/redeFormEditText"
+        android:layout_margin="10dp"
+        android:hint="@string/usu_rio"
+        android:textColor="@android:color/white" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
-        android:hint="Nome"
         android:id="@+id/fullname"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"/>
+        style="@style/redeFormEditText"
+        android:layout_margin="10dp"
+        android:hint="@string/nome"
+        android:textColor="@android:color/white" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
-        android:hint="Email"
         android:id="@+id/email"
+        style="@style/redeFormEditText"
+        android:layout_margin="10dp"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"/>
+        android:textColor="@android:color/white" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
-        android:hint="Senha"
         android:id="@+id/password"
+        style="@style/redeFormEditText"
+        android:layout_margin="10dp"
+        android:hint="@string/senha"
         android:inputType="textPassword"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"/>
+        android:textColor="@android:color/white" />
 
     <Button
+        android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_botao"
         android:text="Registrar"
-        android:id="@+id/register"
-        android:textColor="@color/colorPrimary"
-        android:background="@drawable/button_background"/>
+        android:textColor="@color/white" />
 
     <TextView
+        android:id="@+id/txt_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Já tem uma conta? Entrar"
-        android:id="@+id/txt_login"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="@string/j_tem_uma_conta_entrar"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

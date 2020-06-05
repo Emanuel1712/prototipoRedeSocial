@@ -11,25 +11,30 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:src="@drawable/logo"/>
+        android:layout_height="90dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/logo" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Entrar"
         android:id="@+id/login"
-        android:textColor="@color/colorPrimary"
-        android:background="@drawable/button_background"/>
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Registrar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background_botao"
+        android:text="Entrar"
+        android:textColor="@color/white" />
+
+    <Button
         android:id="@+id/register"
-        android:textColor="@color/colorPrimary"
-        android:background="@drawable/button_background"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background_botao"
+        android:text="Registrar"
+        android:textColor="@color/white" />
 
 </LinearLayout>
