@@ -3,6 +3,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="usu_rio">Usuário</string>
+    <string name="nome">Nome</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="j_tem_uma_conta_entrar">Já possui uma conta? <font color="black">Entrar</font></string>
+    <string name="registre_se">Não possui uma conta? <font color="black">Registre-se</font></string>
 
 
     <string-array name="agressoes">
