@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Log in"
+        android:text="Entrar"
         android:id="@+id/login"
         android:textColor="@color/colorPrimary"
         android:background="@drawable/button_background"/>
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Register"
+        android:text="Registrar"
         android:id="@+id/register"
         android:textColor="@color/colorPrimary"
         android:background="@drawable/button_background"/>

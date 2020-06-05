@@ -25,7 +25,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:text="Notifications"
+                    android:text="Ajuda"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold"/>
 
@@ -34,10 +34,59 @@
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_below="@id/bar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/recycler_view"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtAjuda"
+        android:text="Use esse local para pedir ajuda:"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtAgressao"
+        android:layout_below="@id/txtAjuda"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Tipo de agressão:"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/spnAgressao"
+        android:layout_below="@id/txtAgressao"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/edtDenuncia"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:hint="Escreva aqui sua história"
+        android:maxLines="13"
+        android:gravity="bottom"
+        android:layout_below="@id/spnAgressao"/>
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_below="@id/edtDenuncia"
+        android:layout_centerHorizontal="true"
+        android:text="Enviar"
+        android:layout_marginTop="24dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

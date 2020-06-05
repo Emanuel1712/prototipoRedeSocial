@@ -28,7 +28,7 @@
                 android:background="@android:color/transparent"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/search_bar"
-                android:hint="Search..."
+                android:hint="Procurar..."
                 android:layout_marginStart="10dp" />
 
         </android.support.v7.widget.Toolbar>

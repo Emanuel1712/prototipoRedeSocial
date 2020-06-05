@@ -53,14 +53,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
-                pd.setMessage("Please wait...");
+                pd.setMessage("Por favor aguarde...");
                 pd.show();
 
                 String str_email = email.getText().toString();
                 String str_password = password.getText().toString();
 
                 if (TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)){
-                    Toast.makeText(LoginActivity.this, "All fields are required!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Todos os campos são necessários", Toast.LENGTH_SHORT).show();
                 } else {
 
                     auth.signInWithEmailAndPassword(str_email, str_password)
@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                                         });
                                     } else {
                                         pd.dismiss();
-                                        Toast.makeText(LoginActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Falha na autenticação", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });

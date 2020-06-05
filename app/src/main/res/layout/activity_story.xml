@@ -23,6 +23,34 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/story_photo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/story_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_toEndOf="@id/story_photo"
+                android:text="username"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
         <View
             android:id="@+id/skip"
             android:layout_width="0dp"
@@ -38,32 +66,6 @@
         android:layout_height="3dp"
         android:layout_gravity="top"
         android:layout_marginTop="8dp" />
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/stories"
-        android:layout_margin="10dp">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:id="@+id/story_photo"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="username"
-            android:textStyle="bold"
-            android:textColor="#fff"
-            android:textSize="15sp"
-            android:id="@+id/story_username"
-            android:layout_centerVertical="true"
-            android:layout_margin="5dp"
-            android:layout_toEndOf="@id/story_photo"/>
-
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"

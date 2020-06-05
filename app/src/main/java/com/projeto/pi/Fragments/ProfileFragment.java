@@ -77,8 +77,8 @@ public class ProfileFragment extends Fragment {
         bio = view.findViewById(R.id.bio);
         edit_profile = view.findViewById(R.id.edit_profile);
         username = view.findViewById(R.id.username);
-        my_fotos = view.findViewById(R.id.my_fotos);
-        saved_fotos = view.findViewById(R.id.saved_fotos);
+       //my_fotos = view.findViewById(R.id.my_fotos);
+       // saved_fotos = view.findViewById(R.id.saved_fotos);
         options = view.findViewById(R.id.options);
 
         recyclerView = view.findViewById(R.id.recycler_view);
@@ -107,10 +107,10 @@ public class ProfileFragment extends Fragment {
         mySaves();
 
         if (profileid.equals(firebaseUser.getUid())){
-            edit_profile.setText("Edit Profile");
+            edit_profile.setText("Editar Perfil");
         } else {
             checkFollow();
-            saved_fotos.setVisibility(View.GONE);
+            //saved_fotos.setVisibility(View.GONE);
         }
 
         edit_profile.setOnClickListener(new View.OnClickListener() {
@@ -118,18 +118,18 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 String btn = edit_profile.getText().toString();
 
-                if (btn.equals("Edit Profile")){
+                if (btn.equals("Editar Perfil")){
 
                     startActivity(new Intent(getContext(), EditProfileActivity.class));
 
-                } else if (btn.equals("follow")){
+                } else if (btn.equals("apoiar")){
 
                     FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid())
                             .child("following").child(profileid).setValue(true);
                     FirebaseDatabase.getInstance().getReference().child("Follow").child(profileid)
                             .child("followers").child(firebaseUser.getUid()).setValue(true);
                     addNotification();
-                } else if (btn.equals("following")){
+                } else if (btn.equals("apoiando")){
 
                     FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid())
                             .child("following").child(profileid).removeValue();
@@ -147,7 +147,7 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        my_fotos.setOnClickListener(new View.OnClickListener() {
+       /* my_fotos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 recyclerView.setVisibility(View.VISIBLE);
@@ -155,13 +155,13 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        saved_fotos.setOnClickListener(new View.OnClickListener() {
+           saved_fotos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 recyclerView.setVisibility(View.GONE);
                 recyclerView_saves.setVisibility(View.VISIBLE);
             }
-        });
+        });*/
 
 
         followers.setOnClickListener(new View.OnClickListener() {
@@ -169,7 +169,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), FollowersActivity.class);
                 intent.putExtra("id", profileid);
-                intent.putExtra("title", "followers");
+                intent.putExtra("title", "apoiadores");
                 startActivity(intent);
             }
         });
@@ -179,7 +179,7 @@ public class ProfileFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), FollowersActivity.class);
                 intent.putExtra("id", profileid);
-                intent.putExtra("title", "following");
+                intent.putExtra("title", "apoiando");
                 startActivity(intent);
             }
         });
@@ -192,7 +192,7 @@ public class ProfileFragment extends Fragment {
 
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("userid", firebaseUser.getUid());
-        hashMap.put("text", "started following you");
+        hashMap.put("text", "começou a apoiar você!");
         hashMap.put("postid", "");
         hashMap.put("ispost", false);
 
@@ -230,9 +230,9 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(profileid).exists()){
-                    edit_profile.setText("following");
+                    edit_profile.setText("apoiando");
                 } else{
-                    edit_profile.setText("follow");
+                    edit_profile.setText("apoiar");
                 }
             }
 

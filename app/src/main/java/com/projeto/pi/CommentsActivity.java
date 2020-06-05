@@ -50,7 +50,7 @@ public class CommentsActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Comments");
+        getSupportActionBar().setTitle("Comentários");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +81,7 @@ public class CommentsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (addcomment.getText().toString().equals("")){
-                    Toast.makeText(CommentsActivity.this, "You can't send empty message", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CommentsActivity.this, "Você não pode enviar uma mensagem vazia", Toast.LENGTH_SHORT).show();
                 } else {
                     addComment();
                 }

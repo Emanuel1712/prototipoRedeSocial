@@ -98,7 +98,7 @@ public class AddStoryActivity extends AppCompatActivity {
                         finish();
 
                     } else {
-                        Toast.makeText(AddStoryActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddStoryActivity.this, "Falha", Toast.LENGTH_SHORT).show();
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -109,7 +109,7 @@ public class AddStoryActivity extends AppCompatActivity {
             });
 
         } else {
-            Toast.makeText(AddStoryActivity.this, "No image selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddStoryActivity.this, "Imagem não selecionada", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -125,7 +125,7 @@ public class AddStoryActivity extends AppCompatActivity {
             uploadImage_10();
 
         } else {
-            Toast.makeText(this, "Something gone wrong!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Algo deu errado", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(AddStoryActivity.this, MainActivity.class));
             finish();
         }

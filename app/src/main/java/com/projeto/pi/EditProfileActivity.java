@@ -130,7 +130,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
         reference.updateChildren(map);
 
-        Toast.makeText(EditProfileActivity.this, "Successfully updated!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(EditProfileActivity.this, "Atualizado com sucesso!", Toast.LENGTH_SHORT).show();
     }
 
     private String getFileExtension(Uri uri){
@@ -171,7 +171,7 @@ public class EditProfileActivity extends AppCompatActivity {
                         pd.dismiss();
 
                     } else {
-                        Toast.makeText(EditProfileActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProfileActivity.this, "Falha", Toast.LENGTH_SHORT).show();
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -182,7 +182,7 @@ public class EditProfileActivity extends AppCompatActivity {
             });
 
         } else {
-            Toast.makeText(EditProfileActivity.this, "No image selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditProfileActivity.this, "Imagem não selecionada", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -195,7 +195,7 @@ public class EditProfileActivity extends AppCompatActivity {
             mImageUri = result.getUri();
             uploadImage();
         } else {
-            Toast.makeText(this, "Something gone wrong!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Algo deu errado!", Toast.LENGTH_SHORT).show();
         }
     }
 }
