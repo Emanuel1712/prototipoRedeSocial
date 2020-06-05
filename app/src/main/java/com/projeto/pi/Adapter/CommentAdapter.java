@@ -85,14 +85,14 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ImageVie
                 if (comment.getPublisher().equals(firebaseUser.getUid())) {
 
                         AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
-                        alertDialog.setTitle("Do you want to delete?");
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "No",
+                        alertDialog.setTitle("Você quer deletar?");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Não",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
                                     }
                                 });
-                        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+                        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Sim",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         FirebaseDatabase.getInstance().getReference("Comments")
@@ -101,7 +101,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ImageVie
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if (task.isSuccessful()){
-                                                    Toast.makeText(mContext, "Deleted!", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(mContext, "Deletado!", Toast.LENGTH_SHORT).show();
                                                 }
                                             }
                                         });

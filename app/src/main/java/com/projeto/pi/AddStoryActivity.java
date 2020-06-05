@@ -54,7 +54,7 @@ public class AddStoryActivity extends AppCompatActivity {
 
     private void uploadImage_10(){
         final ProgressDialog pd = new ProgressDialog(this);
-        pd.setMessage("Posting");
+        pd.setMessage("Publicando");
         pd.show();
         if (mImageUri != null){
             final StorageReference fileReference = storageRef.child(System.currentTimeMillis()

@@ -145,7 +145,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder>{
                 if (click) {
                     if (count > 0) {
                         AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "View Story",
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ver momentos",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         //TODO: go to story
@@ -155,7 +155,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder>{
                                         dialog.dismiss();
                                     }
                                 });
-                        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Add Story",
+                        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Adicionar momentos",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         Intent intent = new Intent(mContext, AddStoryActivity.class);
@@ -170,10 +170,10 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder>{
                     }
                 } else {
                     if (count > 0){
-                        textView.setText("My story");
+                        textView.setText("Moments");
                         imageView.setVisibility(View.GONE);
                     } else {
-                        textView.setText("Add story");
+                        textView.setText("Add");
                         imageView.setVisibility(View.VISIBLE);
                     }
                 }

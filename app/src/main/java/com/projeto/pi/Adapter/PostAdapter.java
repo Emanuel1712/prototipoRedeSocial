@@ -81,7 +81,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
 
         publisherInfo(holder.image_profile, holder.username, holder.publisher, post.getPublisher());
         isLiked(post.getPostid(), holder.like);
-        isSaved(post.getPostid(), holder.save);
+        //isSaved(post.getPostid(), holder.save);
         nrLikes(holder.likes, post.getPostid());
         getCommetns(post.getPostid(), holder.comments);
 
@@ -99,7 +99,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
             }
         });
 
-        holder.save.setOnClickListener(new View.OnClickListener() {
+/*        holder.save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (holder.save.getTag().equals("save")){
@@ -110,7 +110,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
                             .child(post.getPostid()).removeValue();
                 }
             }
-        });
+        });*/
 
         holder.image_profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -215,7 +215,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
                                         });
                                 return true;
                             case R.id.report:
-                                Toast.makeText(mContext, "Reported clicked!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(mContext, "Usuário reportado", Toast.LENGTH_SHORT).show();
+                                // TODO: 05/06/20
                                 return true;
                             default:
                                 return false;
@@ -282,7 +283,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
-                                        Toast.makeText(mContext, "Deleted!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(mContext, "Deletado!", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                     }
@@ -301,7 +302,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                likes.setText(dataSnapshot.getChildrenCount()+" likes");
+                likes.setText(dataSnapshot.getChildrenCount()+" gostei");
             }
 
             @Override
@@ -317,7 +318,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                comments.setText("View All "+dataSnapshot.getChildrenCount()+" Comments");
+                comments.setText("Ver todos os "+dataSnapshot.getChildrenCount()+" comentários");
             }
 
             @Override
@@ -372,14 +373,14 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
         });
     }
 
-    private void isSaved(final String postid, final ImageView imageView){
+  /*   private void isSaved(final String postid, final ImageView imageView){
 
         final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
                 .child("Saves").child(firebaseUser.getUid());
         reference.addValueEventListener(new ValueEventListener() {
-            @Override
+           @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.child(postid).exists()){
                     imageView.setImageResource(R.drawable.ic_save_black);
@@ -395,11 +396,11 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
 
             }
         });
-    }
+    }*/
 
     private void editPost(final String postid){
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext);
-        alertDialog.setTitle("Edit Post");
+        alertDialog.setTitle("Editar Postagem");
 
         final EditText editText = new EditText(mContext);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
@@ -410,7 +411,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
 
         getText(postid, editText);
 
-        alertDialog.setPositiveButton("Edit",
+        alertDialog.setPositiveButton("Editar",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -422,7 +423,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ImageViewHolde
                                 .child(postid).updateChildren(hashMap);
                     }
                 });
-        alertDialog.setNegativeButton("Cancel",
+        alertDialog.setNegativeButton("Cancelar",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
