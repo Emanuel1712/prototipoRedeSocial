@@ -24,10 +24,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:text="Fotos"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/purple"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 

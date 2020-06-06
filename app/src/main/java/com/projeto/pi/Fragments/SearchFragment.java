@@ -48,7 +48,7 @@ public class SearchFragment extends Fragment {
 
         userList = new ArrayList<>();
         userAdapter = new UserAdapter(getContext(), userList, true);
-        recyclerView.setAdapter(userAdapter);
+
 
         readUsers();
         search_bar.addTextChangedListener(new TextWatcher() {
@@ -59,6 +59,7 @@ public class SearchFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                recyclerView.setAdapter(userAdapter);
                 searchUsers(charSequence.toString().toLowerCase());
             }
 

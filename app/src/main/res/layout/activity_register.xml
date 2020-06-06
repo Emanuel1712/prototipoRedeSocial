@@ -60,6 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/j_tem_uma_conta_entrar"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
 
 </LinearLayout>

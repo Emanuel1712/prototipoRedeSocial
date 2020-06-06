@@ -9,8 +9,8 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:civ_border_color="#f23b5a"
-        app:civ_border_width="2dp"
+        app:civ_border_color="@color/purple"
+        app:civ_border_width="1dp"
         android:layout_gravity="center"
         android:src="@drawable/placeholder"
         android:layout_marginTop="5dp"
@@ -19,8 +19,8 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:civ_border_color="#afafaf"
-        app:civ_border_width="2dp"
+        app:civ_border_color="@color/purple"
+        app:civ_border_width="1dp"
         android:visibility="gone"
         android:layout_gravity="center"
         android:src="@drawable/placeholder"
@@ -28,14 +28,14 @@
         android:id="@+id/story_photo_seen"/>
 
     <TextView
+        android:id="@+id/story_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="username"
-        android:gravity="center"
-        android:textSize="12dp"
-        android:id="@+id/story_username"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_gravity="center"
-        android:maxLines="1"/>
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="username"
+        android:textColor="@color/purple"
+        android:textSize="12dp" />
 
 </LinearLayout>

@@ -15,5 +15,13 @@
         <item name="android:background">@drawable/background_caixa_texto</item>
         <item name="android:textColorHint">@android:color/white</item>
     </style>
+    <style name="redeFormEditText1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@drawable/background_caixa_texto</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
 
 </resources>

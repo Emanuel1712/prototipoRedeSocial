@@ -9,12 +9,17 @@
     <string name="senha">Senha</string>
     <string name="j_tem_uma_conta_entrar">Já possui uma conta? <font color="black">Entrar</font></string>
     <string name="registre_se">Não possui uma conta? <font color="black">Registre-se</font></string>
+    <string name="entrar">Entrar</string>
 
 
     <string-array name="agressoes">
-            <item>Agressão verbal</item>
-            <item>Agressão psicológica</item>
-            <item>Agressão fisica</item>
+            <item>Violência física</item>
+            <item>Violência psicológica</item>
+            <item>Violência sexual</item>
+            <item>Violência patrimonial</item>
+            <item>Violência moral</item>
+
+
         </string-array>
 
 

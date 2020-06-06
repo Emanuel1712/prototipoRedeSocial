@@ -27,7 +27,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     android:maxLines="1"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:textColor="@color/purple"
                     android:textStyle="bold"
                     android:id="@+id/username"/>
 
@@ -88,7 +88,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/posts"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:textColor="@color/purple"
                                 android:layout_gravity="center"
                                 android:textSize="18sp"
                                 android:textStyle="bold"/>
@@ -96,7 +96,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Publicações"/>
+                                android:text="Publicações"
+                                android:textColor="@color/purple" />
 
                         </LinearLayout>
 
@@ -110,7 +111,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/followers"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:textColor="@color/purple"
                                 android:layout_gravity="center"
                                 android:textSize="18sp"
                                 android:textStyle="bold"/>
@@ -118,7 +119,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Apoiadores"/>
+                                android:text="Apoiadores"
+                                android:textColor="@color/purple" />
 
                         </LinearLayout>
 
@@ -131,7 +133,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:textColor="@color/purple"
                                 android:layout_gravity="center"
                                 android:textSize="18sp"
                                 android:id="@+id/following"
@@ -140,22 +142,32 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Apoiando"/>
+                                android:text="Apoiando"
+                                android:textColor="@color/purple" />
 
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <Button
+                        android:id="@+id/edit_profile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:id="@+id/edit_profile"
-                        android:background="@drawable/button_black"/>
+                        android:background="@drawable/background_botao"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlack"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
 
             <LinearLayout
                 android:layout_marginStart="16dp"
@@ -178,7 +190,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:id="@+id/bio"
                     android:maxLines="5"
                     android:textColor="@color/colorPrimaryDark"/>

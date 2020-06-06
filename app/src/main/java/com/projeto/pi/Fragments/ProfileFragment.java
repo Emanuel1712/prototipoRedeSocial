@@ -83,7 +83,7 @@ public class ProfileFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        LinearLayoutManager mLayoutManager = new GridLayoutManager(getContext(), 3);
+        LinearLayoutManager mLayoutManager = new GridLayoutManager(getContext(), 2);
         recyclerView.setLayoutManager(mLayoutManager);
         postList = new ArrayList<>();
         myFotosAdapter = new MyFotosAdapter(getContext(), postList);
@@ -91,7 +91,7 @@ public class ProfileFragment extends Fragment {
 
         recyclerView_saves = view.findViewById(R.id.recycler_view_save);
         recyclerView_saves.setHasFixedSize(true);
-        LinearLayoutManager mLayoutManagers = new GridLayoutManager(getContext(), 3);
+        LinearLayoutManager mLayoutManagers = new GridLayoutManager(getContext(), 2);
         recyclerView_saves.setLayoutManager(mLayoutManagers);
         postList_saves = new ArrayList<>();
         myFotosAdapter_saves = new MyFotosAdapter(getContext(), postList_saves);
