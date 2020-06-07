@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "64960389281",
-    "firebase_url": "https://teste-87ad8.firebaseio.com",
-    "project_id": "teste-87ad8",
-    "storage_bucket": "teste-87ad8.appspot.com"
+    "project_number": "900331515644",
+    "firebase_url": "https://piprototipo-a7f1c.firebaseio.com",
+    "project_id": "piprototipo-a7f1c",
+    "storage_bucket": "piprototipo-a7f1c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:64960389281:android:c58aa8fb07476ae4f010e0",
+        "mobilesdk_app_id": "1:900331515644:android:be5735102ec4b5693c3179",
         "android_client_info": {
-          "package_name": "com.projeto.instagramtest"
+          "package_name": "com.projeto.pi"
         }
       },
       "oauth_client": [
         {
-          "client_id": "64960389281-4mko1v409497ao8pil2if0mchdmod2r9.apps.googleusercontent.com",
+          "client_id": "900331515644-sits0g6q75f8jdjuamsts5t5u3hd77r8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.projeto.instagramtest",
-            "certificate_hash": "334a97c6c03b9d82e8596a64ea65a2a0f31318e3"
+            "package_name": "com.projeto.pi",
+            "certificate_hash": "e5deedaa44e01eccd189c5e57360366381157513"
           }
         },
         {
-          "client_id": "64960389281-71kmi8evpkghgl125380inj1qd5do83q.apps.googleusercontent.com",
+          "client_id": "900331515644-ar4ehc34l4okjs4lq9ahcmm9om34hjqc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBY5nPfDWrAeUQc6CjVrI98iyxM8plqSa4"
+          "current_key": "AIzaSyCO57uUkTSppW5oiGr5wpg4ZSdk1VGhg7w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "64960389281-71kmi8evpkghgl125380inj1qd5do83q.apps.googleusercontent.com",
+              "client_id": "900331515644-ar4ehc34l4okjs4lq9ahcmm9om34hjqc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

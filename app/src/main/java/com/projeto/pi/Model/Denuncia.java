@@ -1,6 +1,8 @@
 package com.projeto.pi.Model;
 
-public class Denuncia {
+import java.io.Serializable;
+
+public class Denuncia implements Serializable {
     private String id;
     private String uuid;
     private String comment;

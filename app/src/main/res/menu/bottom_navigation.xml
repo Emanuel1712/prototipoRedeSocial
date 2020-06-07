@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/ic_rede_home"
-        android:title="Início"/>
+        android:id="@+id/nav_add"
+        android:icon="@drawable/ic_rede_add"
+        android:title="Postar"/>
 
     <item
         android:id="@+id/nav_search"
@@ -13,18 +12,18 @@
         android:title="Procurar"/>
 
     <item
-        android:id="@+id/nav_add"
-        android:icon="@drawable/ic_rede_add"
-        android:title="Postar"/>
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_rede_home"
+        android:title="Início"/>
 
-    <item
-        android:id="@+id/nav_heart"
-        android:icon="@drawable/ic_rede_heart1"
-        android:title="Ajuda"/>
 
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_rede_profile"
         android:title="Perfil"/>
 
+    <item
+        android:id="@+id/nav_heart"
+        android:icon="@drawable/ic_rede_heart1"
+        android:title="Ajuda"/>
 </menu>
